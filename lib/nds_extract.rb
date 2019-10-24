@@ -34,7 +34,16 @@ end
 # Your code after this point
 
 def movies_with_director_key(name, movies_collection)
-  
+  result = []
+  i = 0
+
+  while i < movies_collection.length do
+    movie_data = movies_collection[i]
+    result << movie_with_director_name(name, movie_data)
+    i += 1
+  end
+
+  result
 end
 
 
